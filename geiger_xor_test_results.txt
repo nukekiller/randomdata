@@ -1,0 +1,214 @@
+
+
+
+DIEHARDER & NIST (STS) RANDOMNESS TESTS FOR GEIGER COUNTER DATA
+by Scotch Wichmann
+
+Website: http://www.psiresearch.net/
+
+
+
+
+DIEHARDER RESULTS
+
+Website: https://webhome.phy.duke.edu/~rgb/General/dieharder.php
+
+
+#=============================================================================#
+#            dieharder version 3.31.1 Copyright 2003 Robert G. Brown          #
+#=============================================================================#
+   rng_name    1           filename             1rands/second1
+        mt199371      /home/falcon/code/geig_xor1  1.45e+08  1
+#=============================================================================#
+        test_name   1ntup1 tsamples 1psamples1  p-value 1Assessment
+#=============================================================================#
+   diehard_birthdays1   01       1001     10010.356431011  PASSED  
+      diehard_operm51   01   10000001     10010.614436861  PASSED  
+  diehard_rank_32x321   01     400001     10010.372099681  PASSED  
+    diehard_rank_6x81   01    1000001     10010.302761651  PASSED  
+   diehard_bitstream1   01   20971521     10010.081423311  PASSED  
+        diehard_opso1   01   20971521     10010.979742341  PASSED  
+        diehard_oqso1   01   20971521     10010.891613351  PASSED  
+         diehard_dna1   01   20971521     10010.034989291  PASSED  
+diehard_count_1s_str1   01    2560001     10010.690131821  PASSED  
+diehard_count_1s_byt1   01    2560001     10010.988715501  PASSED  
+ diehard_parking_lot1   01     120001     10010.881935711  PASSED  
+    diehard_2dsphere1   21      80001     10010.972896661  PASSED  
+    diehard_3dsphere1   31      40001     10010.911732261  PASSED  
+     diehard_squeeze1   01    1000001     10010.689162781  PASSED  
+        diehard_sums1   01       1001     10010.100115411  PASSED  
+        diehard_runs1   01    1000001     10010.271168781  PASSED  
+        diehard_runs1   01    1000001     10010.953554221  PASSED  
+       diehard_craps1   01    2000001     10010.165763791  PASSED  
+       diehard_craps1   01    2000001     10010.838935651  PASSED  
+ marsaglia_tsang_gcd1   01  100000001     10010.583147651  PASSED  
+ marsaglia_tsang_gcd1   01  100000001     10010.237745071  PASSED  
+         sts_monobit1   11    1000001     10010.980693961  PASSED  
+            sts_runs1   21    1000001     10010.660110871  PASSED  
+
+
+
+NIST STS RESULTS
+
+Website: https://csrc.nist.gov/projects/random-bit-generation/documentation-and-software
+
+
+
+FREQUENCY
+
+________________________________________________________________________________
+
+		FILE = geig_xor.txt		ALPHA = 0.0100
+________________________________________________________________________________
+
+		BITSREAD = 10000 0s = 5006 1s = 4994
+
+
+			APPROXIMATE ENTROPY TEST
+		--------------------------------------------
+		COMPUTATIONAL INFORMATION:
+		--------------------------------------------
+		(a) m (block length)    = 8
+		(b) n (sequence length) = 10000
+		(c) Chi^2               = 286.207258
+		(d) Phi(m)	       = -5.529102
+		(e) Phi(m+1)	       = -6.207939
+		(f) ApEn                = 0.678837
+		(g) Log(2)              = 0.693147
+		--------------------------------------------
+SUCCESS		p_value = 0.094254
+
+
+
+			BLOCK FREQUENCY TEST
+		---------------------------------------------
+		COMPUTATIONAL INFORMATION:
+		---------------------------------------------
+		(a) Chi^2           = 82.281250
+		(b) # of substrings = 78
+		(c) block length    = 128
+		(d) Note: 16 bits were discarded.
+		---------------------------------------------
+SUCCESS		p_value = 0.348318
+
+
+
+
+		      CUMULATIVE SUMS (FORWARD) TEST
+		-------------------------------------------
+		COMPUTATIONAL INFORMATION:
+		-------------------------------------------
+		(a) The maximum partial sum = 131
+		-------------------------------------------
+SUCCESS		p_value = 0.380222
+
+		      CUMULATIVE SUMS (REVERSE) TEST
+		-------------------------------------------
+		COMPUTATIONAL INFORMATION:
+		-------------------------------------------
+		(a) The maximum partial sum = 119
+		-------------------------------------------
+SUCCESS		p_value = 0.467379
+
+
+
+
+
+				FFT TEST
+		-------------------------------------------
+		COMPUTATIONAL INFORMATION:
+		-------------------------------------------
+		(a) Percentile = 95.160000
+		(b) N_l        = 4758.000000
+		(c) N_o        = 4750.000000
+		(d) d          = 0.734130
+		-------------------------------------------
+SUCCESS		p_value = 0.462869
+
+
+
+
+			      FREQUENCY TEST
+		---------------------------------------------
+		COMPUTATIONAL INFORMATION:
+		---------------------------------------------
+		(a) The nth partial sum = -12
+		(b) S_n/n               = -0.001200
+		---------------------------------------------
+SUCCESS		p_value = 0.904483
+
+
+
+
+			  LONGEST RUNS OF ONES TEST
+		---------------------------------------------
+		COMPUTATIONAL INFORMATION:
+		---------------------------------------------
+		(a) N (# of substrings)  = 78
+		(b) M (Substring Length) = 128
+		(c) Chi^2                = 3.500905
+		---------------------------------------------
+		      F R E Q U E N C Y
+		---------------------------------------------
+		<=4  5  6  7  8  >=9 P-value  Assignment
+		  13  19  22  10   6    8 SUCCESS		p_value = 0.623251
+
+
+
+
+				RANK TEST
+		---------------------------------------------
+		COMPUTATIONAL INFORMATION:
+		---------------------------------------------
+		(a) Probability P_32 = 0.288788
+		(b)             P_31 = 0.577576
+		(c)             P_30 = 0.133636
+		(d) Frequency   F_32 = 4
+		(e)             F_31 = 3
+		(f)             F_30 = 2
+		(g) # of matrices    = 9
+		(h) Chi^2            = 2.213158
+		(i) NOTE: 784 BITS WERE DISCARDED.
+		---------------------------------------------
+SUCCESS		p_value = 0.330688
+
+
+
+
+
+				RUNS TEST
+		------------------------------------------
+		COMPUTATIONAL INFORMATION:
+		------------------------------------------
+		(a) Pi                        = 0.499400
+		(b) V_n_obs (Total # of runs) = 5044
+		(c) V_n_obs - 2 n pi (1-pi)
+		    -----------------------   = 0.622357
+		      2 sqrt(2n) pi (1-pi)
+		------------------------------------------
+SUCCESS		p_value = 0.378781
+
+
+
+
+
+			       SERIAL TEST
+		---------------------------------------------
+		 COMPUTATIONAL INFORMATION:		  
+		---------------------------------------------
+		(a) Block length    (m) = 16
+		(b) Sequence length (n) = 10000
+		(c) Psi_m               = 66768.870400
+		(d) Psi_m-1             = 33620.761600
+		(e) Psi_m-2             = 16866.483200
+		(f) Del_1               = 33148.108800
+		(g) Del_2               = 16393.830400
+		---------------------------------------------
+SUCCESS		p_value1 = 0.069210
+SUCCESS		p_value2 = 0.476883
+
+
+
+
+
+

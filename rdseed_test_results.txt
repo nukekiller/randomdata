@@ -1,0 +1,174 @@
+
+
+
+DIEHARDER & NIST (STS) RANDOMNESS TESTS FOR RDSEED DATA
+by Scotch Wichmann
+
+Website: http://www.psiresearch.net/
+
+
+For more info on Intel's digital random number generator (DRNG)
+that uses thermal noise as physical source of randomness
+that can be accessed via the RDSEED function, check out:
+
+https://www.intel.com/content/www/us/en/developer/articles/guide/intel-digital-random-number-generator-drng-software-implementation-guide.html
+
+
+
+
+DIEHARDER RESULTS
+
+Website: https://webhome.phy.duke.edu/~rgb/General/dieharder.php
+
+#=============================================================================#
+#            dieharder version 3.31.1 Copyright 2003 Robert G. Brown          #
+#=============================================================================#
+   rng_name    1           filename             1rands/second1
+        mt199371                    ./rdseed.txt1  1.50e+08  1
+#=============================================================================#
+        test_name   1ntup1 tsamples 1psamples1  p-value 1Assessment
+#=============================================================================#
+   diehard_birthdays1   01       1001     10010.439617311  PASSED  
+      diehard_operm51   01   10000001     10010.236184531  PASSED  
+  diehard_rank_32x321   01     400001     10010.393474591  PASSED  
+    diehard_rank_6x81   01    1000001     10010.478969431  PASSED  
+   diehard_bitstream1   01   20971521     10010.989089441  PASSED  
+        diehard_opso1   01   20971521     10010.095882401  PASSED  
+        diehard_oqso1   01   20971521     10010.844551331  PASSED  
+         diehard_dna1   01   20971521     10010.922916271  PASSED  
+diehard_count_1s_str1   01    2560001     10010.865891721  PASSED  
+diehard_count_1s_byt1   01    2560001     10010.717094261  PASSED  
+ diehard_parking_lot1   01     120001     10010.449769671  PASSED  
+    diehard_2dsphere1   21      80001     10010.598028891  PASSED  
+    diehard_3dsphere1   31      40001     10010.234417441  PASSED  
+     diehard_squeeze1   01    1000001     10010.648378171  PASSED  
+        diehard_sums1   01       1001     10010.104579431  PASSED  
+        diehard_runs1   01    1000001     10010.858936641  PASSED  
+        diehard_runs1   01    1000001     10010.752593601  PASSED  
+       diehard_craps1   01    2000001     10010.596703841  PASSED  
+       diehard_craps1   01    2000001     10010.711128071  PASSED  
+ marsaglia_tsang_gcd1   01  100000001     10010.903426821  PASSED  
+ marsaglia_tsang_gcd1   01  100000001     10010.239028601  PASSED  
+         sts_monobit1   11    1000001     10010.596297251  PASSED  
+            sts_runs1   21    1000001     10010.668052241  PASSED  
+
+
+
+NIST STS RESULTS
+
+Website: https://csrc.nist.gov/projects/random-bit-generation/documentation-and-software
+
+________________________________________________________________________________
+
+		FILE = rdseed_100.txt		ALPHA = 0.0100
+________________________________________________________________________________
+
+		BITSREAD = 10000 0s = 4910 1s = 5090
+
+
+		APPROXIMATE ENTROPY TEST
+		--------------------------------------------
+		COMPUTATIONAL INFORMATION:
+		--------------------------------------------
+		(a) m (block length)    = 8
+		(b) n (sequence length) = 10000
+		(c) Chi^2               = 237.081330
+		(d) Phi(m)	       = -5.531170
+		(e) Phi(m+1)	       = -6.212463
+		(f) ApEn                = 0.681293
+		(g) Log(2)              = 0.693147
+		--------------------------------------------
+SUCCESS		p_value = 0.796157
+
+
+			BLOCK FREQUENCY TEST
+		---------------------------------------------
+		COMPUTATIONAL INFORMATION:
+		---------------------------------------------
+		(a) Chi^2           = 77.250000
+		(b) # of substrings = 78
+		(c) block length    = 128
+		(d) Note: 16 bits were discarded.
+		---------------------------------------------
+SUCCESS		p_value = 0.502709
+
+
+
+		      CUMULATIVE SUMS (FORWARD) TEST
+		-------------------------------------------
+		COMPUTATIONAL INFORMATION:
+		-------------------------------------------
+		(a) The maximum partial sum = 208
+		-------------------------------------------
+SUCCESS		p_value = 0.075051
+
+		      CUMULATIVE SUMS (REVERSE) TEST
+		-------------------------------------------
+		COMPUTATIONAL INFORMATION:
+		-------------------------------------------
+		(a) The maximum partial sum = 190
+		-------------------------------------------
+SUCCESS		p_value = 0.114866
+
+
+
+			      FREQUENCY TEST
+		---------------------------------------------
+		COMPUTATIONAL INFORMATION:
+		---------------------------------------------
+		(a) The nth partial sum = 180
+		(b) S_n/n               = 0.018000
+		---------------------------------------------
+SUCCESS		p_value = 0.071861
+
+
+				FFT TEST
+		-------------------------------------------
+		COMPUTATIONAL INFORMATION:
+		-------------------------------------------
+		(a) Percentile = 94.800000
+		(b) N_l        = 4740.000000
+		(c) N_o        = 4750.000000
+		(d) d          = -0.917663
+		-------------------------------------------
+SUCCESS		p_value = 0.358795
+
+
+
+				RANK TEST
+		---------------------------------------------
+		COMPUTATIONAL INFORMATION:
+		---------------------------------------------
+		(a) Probability P_32 = 0.288788
+		(b)             P_31 = 0.577576
+		(c)             P_30 = 0.133636
+		(d) Frequency   F_32 = 2
+		(e)             F_31 = 5
+		(f)             F_30 = 2
+		(g) # of matrices    = 9
+		(h) Chi^2            = 0.674160
+		(i) NOTE: 784 BITS WERE DISCARDED.
+		---------------------------------------------
+SUCCESS		p_value = 0.713852
+
+
+   
+				RUNS TEST
+		------------------------------------------
+		COMPUTATIONAL INFORMATION:
+		------------------------------------------
+		(a) Pi                        = 0.509000
+		(b) V_n_obs (Total # of runs) = 5094
+		(c) V_n_obs - 2 n pi (1-pi)
+		    -----------------------   = 1.352709
+		      2 sqrt(2n) pi (1-pi)
+		------------------------------------------
+SUCCESS		p_value = 0.055746
+
+
+
+
+
+
+
+
